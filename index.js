@@ -1,12 +1,8 @@
 var axios = require('axios');
 var fs = require('fs');
 var path = require('path');
+var config = require('./config.js')
 var urls = fs.readFileSync(path.resolve(__dirname, './urls.txt'), 'utf8');
-
-var config = {
-  site: "<site>",
-  token: "<token>"
-}
 
 const url = `http://data.zz.baidu.com/urls?site=${config.site}&token=${config.token}`;
 
